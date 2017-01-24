@@ -1,0 +1,52 @@
+buildscript {
+    ext {
+        springBootVersion = '1.4.3.RELEASE'
+    }
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath(
+                "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}",
+                'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
+        )
+    }
+}
+
+group = "info.donggan"
+version = "0.1.0"
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'auth-server'
+    version = '0.1.0'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile(
+            'org.springframework.boot:spring-boot-starter-web',
+            'org.springframework.security.oauth:spring-security-oauth2',
+            'org.springframework.security:spring-security-jwt'
+    )
+    testCompile(
+            'org.springframework.boot:spring-boot-starter-test',
+    )
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+    distributionUrl = 'http://get.jenv.mvnsearch.org/download/gradle/gradle-3.3.zip'
+}
+
+springBoot {
+    buildInfo()
+}
