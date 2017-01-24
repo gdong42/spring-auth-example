@@ -9,8 +9,8 @@ and spring-oauth-security.
 It uses username/password authentication to exchange for a JWT Access Token / Refresh
 Token.
 
-In addition, it demonstrates how to use client_id to differentiate two different
-authentication provider that could verify username/password in completely different
+In addition, it demonstrates how to use client_id to differentiate two
+authentication providers that could verify username/password in completely different
 stores. This is useful when you want to use a same auth server for multiple user
 stores - perhaps different applications with isolated user systems.
 
