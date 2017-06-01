@@ -1,20 +1,19 @@
 buildscript {
     ext {
-        springBootVersion = '1.4.3.RELEASE'
+        springBootVersion = '1.5.3.RELEASE'
     }
     repositories {
         jcenter()
     }
     dependencies {
         classpath(
-                "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}",
-                'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
+                "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
         )
     }
 }
 
 group = "info.donggan"
-version = "0.1.0"
+version = "0.2.0"
 
 apply plugin: 'java'
 apply plugin: 'idea'
@@ -22,7 +21,7 @@ apply plugin: 'org.springframework.boot'
 
 jar {
     baseName = 'auth-server'
-    version = '0.1.0'
+    version = '0.2.0'
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8

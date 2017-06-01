@@ -24,7 +24,7 @@ stores - perhaps different applications with isolated user systems.
 
 it will start the server on port 9090.
 
-* request access token
+* Request Access Token & Refresh Token
 
 The example code hardcoded a user `gan/foo` for client_id `foo_app`, and `dong/bar`
 for client_id 'bar_app'; try curl the server using above combinations.
@@ -54,9 +54,9 @@ The response json would look like
 }
 ```
 
-* request refresh token
+* Refresh tokens with Refresh Token
 
-Request the server with a refresh_token and grant type 'refresh_token', it will
+Request the server with a refresh_token, which is saved from above step, and grant type 'refresh_token', it will
 response with a pair of new access_token/refresh_token. E.g.
 
 ```
