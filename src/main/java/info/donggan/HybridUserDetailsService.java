@@ -50,12 +50,12 @@ public class HybridUserDetailsService implements UserDetailsService {
 
     if (clientPrincipal instanceof User) {
       if ("foo_app".equalsIgnoreCase(((User) clientPrincipal).getUsername())) {
-        // patient client
+        // foo client
         UserDetails user = loadFooUserDetails(username);
         if (user != null)
           return user;
       } else if ("bar_app".equalsIgnoreCase(((User) clientPrincipal).getUsername())) {
-        // clinic client
+        // bar client
         UserDetails user = loadBarUserDetails(username);
         if (user != null)
           return user;
